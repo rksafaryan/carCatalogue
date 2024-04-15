@@ -7,11 +7,12 @@ WORKDIR /app
 COPY go.mod go.sum ./
 RUN go mod download
 
-COPY *.go ./
+COPY . .
 
-RUN go build -o /carcatalogue
+RUN go build -o carcatalogue cmd/serve/main.go
 
 EXPOSE 8080
 
 # Run
-CMD [ "/carcatalogue" ]
+RUN ls
+CMD [ "./cmd/serve" ]
