@@ -9,10 +9,10 @@ RUN go mod download
 
 COPY . .
 
-RUN go build -o carcatalogue cmd/serve/main.go
+RUN go build -o carcatalogue main.go
 
 EXPOSE 8080
 
 # Run
 RUN ls
-CMD [ "./cmd/serve" ]
+CMD [ "./carcatalogue" ]
