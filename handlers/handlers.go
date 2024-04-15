@@ -2,9 +2,11 @@ package handlers
 
 import (
 	"fmt"
+	"github.com/pborman/uuid"
 	"net/http"
 )
 
 func SwaggerYaml(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintln(w, "swagger yaml")
+	uuidWithHyphen := uuid.NewRandom()
+	fmt.Fprintln(w, "swagger yaml"+string(uuidWithHyphen))
 }

@@ -9,9 +9,9 @@ RUN go mod download
 
 COPY *.go ./
 
-RUN CGO_ENABLED=0 GOOS=linux go build -o /car_catalogue
+RUN CGO_ENABLED=0 GOOS=linux go build -o /carcatalogue
 
 EXPOSE 8080
 
 # Run
-CMD [ "/car_catalogue" ]
+CMD [ "/carcatalogue" ]
