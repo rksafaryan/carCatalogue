@@ -1,6 +1,6 @@
 module github.com/rksafaryan/carcatalogue
 
-go 1.22.1
+go 1.22
 
 require github.com/pborman/uuid v1.2.1
 
