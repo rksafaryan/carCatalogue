@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM golang:1.19
+FROM golang:1.22
 
 WORKDIR /app
 
@@ -9,7 +9,7 @@ RUN go mod download
 
 COPY *.go ./
 
-RUN CGO_ENABLED=0 GOOS=linux go build -o /carcatalogue
+RUN go build -o /carcatalogue
 
 EXPOSE 8080
 
