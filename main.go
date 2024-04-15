@@ -1,12 +1,12 @@
 package main
 
 import (
-	"fmt"
+	"github.com/rksafaryan/carcatalogue/handlers"
 	"log"
 	"net/http"
 )
 
 func main() {
-	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) { fmt.Fprint(w, "Hello World!") })
+	http.HandleFunc("/", handlers.SwaggerYaml)
 	log.Fatalln(http.ListenAndServe(":8080", nil))
 }
